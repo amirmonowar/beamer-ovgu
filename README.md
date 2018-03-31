@@ -20,7 +20,7 @@ This guide works for texlive installed under Debian following [these instruction
 
 For using this with pdflatex, you need to copy at least style image, i.e. ```logosOVGU/Signet_EIT_3.eps``` for the style `beamer_eit-en` to the same directory, where your main tex file lives. Otherwise you get an error that *eps file was not found.
 
-If you just need to produce pdf output, I advise using latexmk -pdfps command which should work with files installed by the procedure described in installation section.
+If you just need to produce pdf output, I advise using latexmk -pdfps command which should work with files installed by the procedure described in the installation section.
 
 ## Usage
 In the directory exampleProject, there is a minimal ```[OVGUPresentation.tex](https://github.com/kulvait/beamer-ovgu/blob/master/exampleProject/OVGUPresentation.tex "OVGUPresentation.tex")``` file. It can be compiled by running `make` that uses command `latexmk -bibtex -pdfps OVGUPresentation` to produce pdf presentation.  Or you can simply run `latex  OVGUPresentation`.
