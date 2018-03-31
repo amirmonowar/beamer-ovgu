@@ -1,1 +1,8 @@
 exampleProject/addPath
+*.aux
+*.dvi
+*.snm
+*.toc
+*.log
+*.nav
+*.out
