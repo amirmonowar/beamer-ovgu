@@ -4,6 +4,24 @@
 
 I forked [original repository](https://github.com/eriu/beamer-ovgu) for purposes of Scientific working class. Original template is based on the following files [Lehrstuhl für Elektromagnetische Verträglichkeit](http://www.emv.ovgu.de/Forschung+_+Lehre/Richtlinien+und+Vorlagen-media_id-1424.html) and should comply with a design guidelines based on [CD webpages]( http://www.cd.ovgu.de/).
 
+## Installation
+
+
+Copy folders ```styleOVGU``` and ```logosOVGU``` to the directory ```$TEXMFHOME/tex/latex/local```.
+
+Run ```texhash``` command.
+
+Test if the files are installed properly by issuing ```kpsewhich kpsewhich beamer_eit-en.sty``` that should return the path to the directory with style file.
+
+
+This guide works for texlive installed under Debian following [these instructions](https://www.tug.org/texlive/debian.html).  You can find your TEXMFHOME directory by running ```kpsewhich -var-value=TEXMFHOME```. Alternatively you can copy the content of the folders *OVGU into your project directory.
+
+### Pdflatex
+
+For using this with pdflatex, you need to copy at least style image, i.e. ```beamer-ovgu/logos/Signet_EIT_3.eps``` to the same directory, where your main tex file lives. Otherwise you get an error that *eps file was not found.
+
+If you just need to produce pdf output, I advise using latexmk -pdfps command which should work with files installed by the procedure described in installation section.
+
 
 ## Usage:
 The file ```praesentation.tex``` can be modified to comply with styles of the following organization units:
