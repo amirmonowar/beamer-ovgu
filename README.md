@@ -18,7 +18,7 @@ This guide works for texlive installed under Debian following [these instruction
 
 ### Pdflatex
 
-For using this with pdflatex, you need to copy at least style image, i.e. ```beamer-ovgu/logos/Signet_EIT_3.eps``` to the same directory, where your main tex file lives. Otherwise you get an error that *eps file was not found.
+For using this with pdflatex, you need to copy at least style image, i.e. ```logosOVGU/Signet_EIT_3.eps``` for the style `beamer_eit-en` to the same directory, where your main tex file lives. Otherwise you get an error that *eps file was not found.
 
 If you just need to produce pdf output, I advise using latexmk -pdfps command which should work with files installed by the procedure described in installation section.
 
