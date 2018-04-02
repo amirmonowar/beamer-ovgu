@@ -1,0 +1,163 @@
+\documentclass[
+  % Babel language, also used to load translations
+  english,
+  % Use A4 paper size, you can change this to eg. letterpaper if you need
+  % the letter format. The normal methods to modify the paper size should
+  % be picked up by SDAPS automatically.
+  a4paper, % setting this might break the example scan unfortunately
+  % letterpaper
+  %
+  % If you need it, you can add a custom barcode at the center
+  %globalid=ScientificWorking,
+  %
+  % And the following adds a per sheet barcode at the bottom left
+  %print_questionnaire_id,
+  %
+  % You can choose between twoside and oneside. twoside is the default, and
+  % requires the document to be printed and scanned in duplex mode.
+  twoside,
+  %
+  % With SDAPS 1.1.6 and newer you can choose the mode used when recognizing
+  % checkboxes. valid modes are "checkcorrect" (default), "check" and
+  % "fill".
+  checkmode=checkcorrect,
+  %
+  % The following options make sense so that we can get a better feel for the
+  % final look.
+  %pagemark,
+%put final/draft to the pdf to typeset them
+  stamp,draft,pdf
+]{sdaps}
+\ProvidesDictionary{translator-sdaps-dictionary}{English}
+
+\providetranslation{infotext}{This questionnaire can be read by a computer program. Please use a pen for filling in your answers.}
+\providetranslation{standard-deviation}{Standard-Deviation}
+\providetranslation{info-cross}{Check}
+\providetranslation{info-correct}{Uncheck to correct}
+\providetranslation{answers}{Answers}
+\providetranslation{questionnaireid}{Questionnaire-ID:}
+\providetranslation{surveyid}{Survey-ID:}
+\providetranslation{draft}{draft}
+\providetranslation{info-select}{}
+\providetranslation{info-mark}{}
+\providetranslation{mean}{Mean}
+
+\usepackage[utf8]{inputenc}
+% For demonstration purposes
+\usepackage{multicol}
+
+%\author{\choiceitemtext{1.2cm}{2}{Speaker:}}
+\title{Scientific working presentation evaluation sheet}
+
+\begin{document}
+  % Everything you do should be done inside the questionnaire environment.
+
+  % If you don't like the default text at the beginning of each questionnaire
+  % you can remove it with the optional [noinfo] parameter for the environment 
+  \begin{questionnaire}
+    % There is a predefined "info" style to hilight some text.
+\begin{multicols}{3}
+Presenter
+\textbox*{1cm}{}\vfill\columnbreak
+Paper
+\textbox*{1cm}{}\vfill\columnbreak
+Reviewer
+\textbox*{1cm}{}\vfill\columnbreak
+\end{multicols}
+    % Use \addinfo to add metadata (which is printed on the report later on)
+    %\addinfo{Date}{10.03.2013}
+
+    % You can structure the document using sections. You should not use
+    % subsections yourself, as these are used to typeset question text.
+    \section{Invention}
+    \begin{choicegroup}{}
+      % We have to add the possible choices at the start.
+      \groupaddchoice{Great}
+      \groupaddchoice{Partial}
+      \groupaddchoice{Poor}
+      % After that it is possible to add each question.
+      \choiceline{Paper was in the scope of the class and lesson (medical engineering)}
+      \choiceline{Paper was sufficiently complex for the class}
+      \choiceline{Presentation well addresses also the audience without a deep knowledge of the topic}
+    \end{choicegroup}
+
+    \section{Arrangement}
+    \begin{choicegroup}{}
+      % We have to add the possible choices at the start.
+      \groupaddchoice{Great}
+      \groupaddchoice{Partial}
+      \groupaddchoice{Poor}
+      % After that it is possible to add each question.
+      \choiceline{Is the talk structured in the meaningful and logical way?}
+      \choiceline{Was the proper introduction to a topic given?}
+      \choiceline{Was the proper conclusion given? Were there summarized clearly important parts of the talk?}
+    \end{choicegroup}
+
+   \section{Style}
+    \begin{choicegroup}{}
+      % We have to add the possible choices at the start.
+      \groupaddchoice{Great}
+      \groupaddchoice{Partial}
+      \groupaddchoice{Poor}
+      % After that it is possible to add each question.
+      \choiceline{The style of the presentation adds up to the understandability of the topic.}
+      \choiceline{Proper incomporation of image/media into the presentation.}
+      \choiceline{Meaningful captions of the figures}
+      \choiceline{Correct references and citations}
+      \choiceline{Use the template of OVGU university.}
+    \end{choicegroup}
+    
+    \section{Memory}
+    \begin{choicegroup}{}
+      % We have to add the possible choices at the start.
+      \groupaddchoice{Great}
+      \groupaddchoice{Partial}
+      \groupaddchoice{Poor}
+      % After that it is possible to add each question.
+      \choiceline{Presenter was well prepared for the talk and the flow of the presentation was smooth.}
+      \choiceline{Free speach without major support of manuscript.}
+      \choiceline{Compliance with a duration of 20 minutes (2 min. tolerance).}
+    \end{choicegroup}
+    
+    \section{Delivery}
+    \begin{choicegroup}{}
+      % We have to add the possible choices at the start.
+      \groupaddchoice{Great}
+      \groupaddchoice{Partial}
+      \groupaddchoice{Poor}
+      % After that it is possible to add each question.
+      \choiceline{Good contact and communication with the audience.}
+      \choiceline{Posture towards the audience, proper gestures.}
+      \choiceline{Speach clarity, articulation, sufficient speach level.}
+    \end{choicegroup}
+    
+    \section{Discussion/other aspects}
+    \begin{choicegroup}{}
+      % We have to add the possible choices at the start.
+      \groupaddchoice{Yes}
+      \groupaddchoice{Partly}
+      \groupaddchoice{No}
+      % After that it is possible to add each question.
+      \choiceline{Was the presentation without factical mistakes?}
+      \choiceline{Does the presentation provide correct explanation of the main results of the presented paper?}
+      \choiceline{Was the speaker well prepared for the discussion?}
+    \end{choicegroup}
+   
+\section{Evaluation}
+    \textbox*{1cm}{Total score as a sum of the points, Yes/Great:1 point, Partial/Partly: 0.5 points, Poor/No: 0 points}
+    \textbox*{5cm}{Questions}
+    \textbox*{5cm}{Feedback}
+\vfill
+\begin{multicols}{2}
+Signature
+\textbox*{1cm}{}\vfill\columnbreak
+Date
+\textbox*{1cm}{}\vfill\columnbreak
+\end{multicols}
+
+    % Reset checkbox style again.
+    \def\checkboxstyle{box}
+
+  \end{questionnaire}
+\end{document}
+
