@@ -23,7 +23,7 @@ For using this with pdflatex, you need to copy at least style image, i.e. ```log
 If you just need to produce pdf output, I advise using latexmk -pdfps command which should work with files installed by the procedure described in the installation section.
 
 ## Usage
-In the directory exampleProject, there is a minimal ```[OVGUPresentation.tex](https://github.com/kulvait/beamer-ovgu/blob/master/exampleProject/OVGUPresentation.tex)``` file. It can be compiled by running `make` that uses command `latexmk -bibtex -pdfps OVGUPresentation` to produce pdf presentation.  Or you can simply run `latex  OVGUPresentation`.
+In the directory exampleProject, there is a minimal [OVGUPresentation.tex](https://github.com/kulvait/beamer-ovgu/blob/master/exampleProject/OVGUPresentation.tex) file. It can be compiled by running `make` that uses command `latexmk -bibtex -pdfps OVGUPresentation` to produce pdf presentation.  Or you can simply run `latex  OVGUPresentation`.
 
 Individual styles can be turned on by specifying command such as `\usepackage{beamer_eit-en}` for the following organization units:
 
