@@ -1,0 +1,60 @@
+\documentclass[aspectratio=43]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csvsimple}
+\usepackage{booktabs}
+\usepackage{beamer_eit-en}
+\usepackage[font={scriptsize}]{caption}%Smaller image captions, it for italics, can choose footnotesize to be even smaller
+\captionsetup[figure]{labelformat=empty}%Remove "Figure" from the figure caption
+%\setbeamertemplate{footline}[frame number]
+%\setbeamerfont{footline}{series=\bfseries}
+\usepackage{natbib}
+\usepackage{bibentry}
+
+\begin{document}
+\nobibliography*
+\title[Scientific Working Committees]{Scientific working\\\small{Committee formation class}}
+\author{Vojt\v{e}ch Kulvait, Ph.D.}
+\institute[OVGU FEIT]{
+	Faculty of Electrical Engineering and Information Technology\\
+        Otto-von-Guericke-Universit\"{a}t, Magdeburg
+}
+\mode<presentation>{\keywords{}}
+\date[23.4.2018]
+
+
+\begin{frame}
+        \maketitle
+\end{frame}
+
+\begin{frame}{Table of contents}
+        \tableofcontents
+\end{frame}
+\input{01Introduction.tex}
+\input{02Committees.tex}
+\input{03Papers.tex}
+\input{04Reviews.tex}
+\input{05Delivery.tex}
+\input{06Summary.tex}
+
+\begin{frame}
+\frametitle{Thank you for your attention, looking forward to your presentations.}
+
+\textbf{Contact}
+
+Vojt\v{e}ch Kulvait
+
+\textit{Room} G09-319
+
+\textit{E-mail} \href{mailto:vojtech.kulvait@ovgu.de}{vojtech.kulvait@ovgu.de}
+
+
+\textbf{Course webpage}
+
+\url{https://elearning.ovgu.de/course/view.php?id=637}
+\end{frame}
+
+\bibliographystyle{apalike}
+\nobibliography{literature.bib}
+
+\end{document}
